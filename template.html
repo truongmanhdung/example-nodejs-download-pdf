@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PDF Template</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+			h1 {
+				color: blue;
+			}
+			p {
+				font-size: 14px;
+			}
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 20px;
+			}
+			table,
+			th,
+			td {
+				border: 1px solid black;
+			}
+			th,
+			td {
+				padding: 8px;
+				text-align: left;
+			}
+			th {
+				background-color: #f2f2f2;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Report for {{name}}</h1>
+		<p>Date: {{date}}</p>
+		<p>Address: {{address}}</p>
+		<p>Content: {{content}}</p>
+
+		<!-- Table section -->
+		<h2>Data Table</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Quantity</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each tableData}}
+				<tr></tr>
+			</tbody>
+		</table>
+	</body>
+</html>
